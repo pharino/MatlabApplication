@@ -7,7 +7,8 @@ load('data_cambodia.mat');
 
 % step 2: create grahic
 figure; % create new figure;
-plot(year, per_capita_energy_use); % create 2D plot
-% add grid
-% add x-label and y-label
-% add title
+plot(year, per_capita_energy_use, ':r*', 'LineWidth',1, 'MarkerSize',6); % create 2D plot
+xlim([1975 2025]); ylim([0 5000]); % limit viewing axes
+grid on; grid minor; % add grid
+xlabel('Year'); ylabel('Energy [KWh]')% add x-label and y-label
+title('Energy used per person in Cambodia')% add title
